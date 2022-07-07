@@ -13,5 +13,6 @@ echo "server.host: 0.0.0.0"  >> /etc/kibana/kibana.yml
 sudo systemctl start kibana.service
 cd /usr/share/elasticsearch
 sudo bin/elasticsearch-create-enrollment-token -s kibana
+sleep 30s
 cd /usr/share/kibana
 sudo bin/kibana-verification-code
