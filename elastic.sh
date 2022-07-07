@@ -11,8 +11,8 @@ sudo dpkg -i kibana-8.3.0-amd64.deb
 echo "server.port: 5601"  >> /etc/kibana/kibana.yml
 echo "server.host: 0.0.0.0"  >> /etc/kibana/kibana.yml
 sudo systemctl start kibana.service
+sleep 30s
 cd /usr/share/elasticsearch
 sudo bin/elasticsearch-create-enrollment-token -s kibana
-sleep 30s
 cd /usr/share/kibana
 sudo bin/kibana-verification-code
