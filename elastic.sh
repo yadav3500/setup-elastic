@@ -3,7 +3,6 @@ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.3.0-am
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.3.0-amd64.deb.sha512
 shasum -a 512 -c elasticsearch-8.3.0-amd64.deb.sha512
 sudo dpkg -i elasticsearch-8.3.0-amd64.deb
-sudo  sed '109 s/true/false/' /etc/elasticsearch/elasticsearch.yml
 sudo systemctl start elasticsearch.service
 wget https://artifacts.elastic.co/downloads/kibana/kibana-8.3.0-amd64.deb
 shasum -a 512 kibana-8.3.0-amd64.deb 
